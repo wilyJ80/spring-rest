@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>course-api</name>
+	<name>course-api-data</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1722376220287</id>
+			<id>1722805026239</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
