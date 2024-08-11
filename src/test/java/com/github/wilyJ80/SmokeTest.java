@@ -1,6 +1,6 @@
 package com.github.wilyJ80;
 
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +15,6 @@ public class SmokeTest {
 
 	@Test
 	void contextLoads() throws Exception {
-		Assertions.assertThat(topicController).isNotNull();
+		assertThat(topicController).isNotNull();
 	}
 }

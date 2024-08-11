@@ -68,5 +68,19 @@ class CourseApiDataApplicationTests {
 				.andExpect(status().isOk()).andExpect(jsonPath("$.id").value("typescript"))
 				.andExpect(jsonPath("$.name").value("TypeScript"))
 				.andExpect(jsonPath("$.description").value("Fake typing for the nerds"));
+
+		this.mockMvc.perform(get("/topics/typescript/courses")).andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$").isArray())
+				.andExpect(jsonPath("$", hasSize(0)));
+
+		String typingJSON = "{ \"id\": \"structuraltyping\", \"name\": \"Structural Typing\", \"description\": \"Quacks like a duck\"}";
+
+		this.mockMvc
+				.perform(post("/topics/typescript/courses").contentType(MediaType.APPLICATION_JSON).content(typingJSON))
+				.andExpect(status().isCreated())
+				.andExpect(jsonPath("$.id").value("structuraltyping"))
+				.andExpect(jsonPath("$.name").value("Structural Typing"))
+				.andExpect(jsonPath("$.description").value("Quacks like a duck"));
 	}
 }
