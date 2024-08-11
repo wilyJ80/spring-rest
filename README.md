@@ -1,2 +1,2 @@
-- [ ] Automated API testing
+- [X] Automated API testing
 - [ ] Generated API Documentation?
